@@ -25,11 +25,10 @@ console.log(country)
     <div>
         <img alt = '' src = {country?.flags?.png}/>
         <h4> {country?.name?.official}</h4>
-        
         <h4>{country?.continents !== undefined ? country?.continents[0] : ''}</h4>
         <h6>{country?.population !== undefined ? country?.population : ''}</h6>
-        <h6>{country?.languages.eng}</h6>
-        <h6>{country?.currencies}</h6>
+        <h6>{country?.languages?.eng}</h6>
+        <h6>{country?.currencies !== undefined ? `${Object.keys(country?.currencies)[0]} ${country?.currencies[(Object.keys(country?.currencies)[0])].symbol} ` : ''}</h6>
     </div>
     <div>2</div>
     </div>
